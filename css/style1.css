@@ -1,0 +1,200 @@
+@importar  URL ( 'https://fonts.googleapis.com/css2? family=Aref+Ruqaa:wght@400;700&display=swap' );
+@importar  URL ( 'https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Chivo:wght@300;700;900&display=swap' );
+
+body{
+    margin: 0;
+    background-color: white;
+}
+*{
+    box-sizing: border-box;
+}
+#cajacabecera{
+    width: 100%;
+    background: #1d1c1c;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+#cabecera{
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.menu{
+    width: 100%;
+}
+#btn-menu{
+    display: none;
+}
+#mmovil{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    text-align: right;
+    color: #27d800;
+}
+.menu ul{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu ul li a{
+    display: block;
+    line-height: 85px;
+    padding: 0 20px;
+    color: #0692b9;
+    text-decoration: none;
+    font-family: "Palanquin Dark", sans-serif;
+    font-size: 13px;
+}
+.menu ul li a i{
+    padding-right: 6px;
+}
+.menu a:hover{
+    color: #27d800;
+    border-bottom: 2px solid #d9ff00;
+}
+
+#Logo{
+    width: 10%;
+    
+    padding: 0px 0; 
+    margin-right: 110px;
+}
+/* ************************************************** */
+/* ****************BANNER**************************** */
+/* ************************************************** */
+.section{
+    width: 100%;
+    margin: 0;
+}
+.inicio{
+    background-image: url("../img/Fondo1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    padding-top: 150px;
+    overflow: hidden;
+}
+
+
+#contenido-inicio{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+h1{
+    font-family: 'Aref Ruqaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 90px;
+    text-align: center;
+    color: #3039a1;
+}
+.tit1{
+    margin: 20PX;
+}
+.tit2{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: #2375da;
+}
+.scroll{
+    display: block;
+    margin: auto;
+}
+/*CONFIGURACION DE TAMAÑO DE IMAGENES */
+#AMD{
+    width: 80%;
+    display: block;
+    padding-left: 0px;
+    margin-top: 30px;
+}
+#LOGITECH{
+    width: 60%;
+    display: block;
+    padding-left: 0px;
+}
+#NVIDIA{
+    width: 110%;
+    display: block;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+#HP{
+    width: 80%;
+    display: block;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+#ASUS{
+    width: 80%;
+    display: block;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+#KINGSTON{
+    width: 100%;
+    display: block;
+    padding-left: 0px;
+    margin-top: 50px;
+}
+
+/* RESPOSIVE DESIGN TREN Y NAVE */
+@media (max-width:630px){
+    @media (max-width: 1087px){
+        #cabecera{
+           justify-content: space-between;
+       } 
+       #Logo{
+           width: 20%;
+           display: block;
+           padding-left: 20px;
+       }
+       .menu{
+           position: absolute;
+           top: 100%;
+           transform: translateX(-100%);
+           transition: all 0.5s;
+       }
+       .menu ul{
+           flex-direction: column;
+           background: #000000;
+           opacity: 75%;
+       }
+       .menu ul li a{
+           line-height: 45px;
+           padding: 0 20px;
+           border-bottom: 2px solid #6848;
+       }
+       #mmovil{
+           display: block;
+           padding-right: 20px;
+       }
+   }
+   #btn-menu:checked ~ .menu{
+       transform: translateX(0%);
+   }
+    .tit2{
+        font-size: 22px;
+    }
+    .scroll{
+        max-width: 10%;
+    }
+    #contenido-inicio{
+        padding-top: 30%;
+    }
+}
+
